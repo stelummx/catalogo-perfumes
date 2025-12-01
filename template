@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Perfumes de Diseñador</title>
+    <style>
+        /* Estilos para impresión A4 */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            width: 210mm; /* Ancho A4 */
+            height: 297mm; /* Alto A4 */
+            margin: 0 auto;
+            padding: 15mm;
+            background-color: #ffffff;
+            color: #333;
+        }
+        
+        .catalogo-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d4af37;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        
+        .header h2 {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .perfumes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 10px;
+            flex-grow: 1;
+        }
+        
+        .perfume-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f9f9f9;
+            transition: transform 0.2s;
+            text-align: center;
+        }
+        
+        .perfume-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .perfume-imagen {
+            width: 100%;
+            height: 140px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .perfume-imagen img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        
+        .perfume-info {
+            width: 100%;
+        }
+        
+        .marca {
+            font-weight: bold;
+            font-size: 12px;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+        
+        .nombre {
+            font-size: 11px;
+            color: #e74c3c;
+            margin-bottom: 3px;
+            font-weight: 600;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .mililitros {
+            font-size: 10px;
+            color: #7f8c8d;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+            font-size: 10px;
+            color: #95a5a6;
+        }
+        
+        /* Estilos para etiquetas de género */
+        .genero {
+            display: inline-block;
+            font-size: 9px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            margin-top: 4px;
+        }
+        
+        .hombre {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .mujer {
+            background-color: #e84393;
+            color: white;
+        }
+        
+        .unisex {
+            background-color: #27ae60;
+            color: white;
+        }
+        
+        /* Para impresión */
+        @media print {
+            body {
+                padding: 5mm;
+            }
+            
+            .perfume-item {
+                break-inside: avoid;
+                border: 1px solid #ddd;
+            }
+            
+            .perfume-item:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="catalogo-container">
+        <div class="header">
+            <h1>CATÁLOGO DE PERFUMES DE DISEÑADOR</h1>
+            <h2>Perfumes nuevos y testers 100% originales.</h2>
+        </div>
+        
+        <div class="perfumes-grid">
+            <!-- Perfume 1 -->
+            <div class="perfume-item">
+                <div class="perfume-imagen">
+                    <!-- Reemplazar con imagen real -->
+                    <div style="width: 60px; height: 120px; background: linear-gradient(to bottom, #1e3c72, #2a5298); border-radius: 5px; position: relative;">
+                        <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 30px; height: 20px; background-color: #d4af37; border-radius: 3px;"></div>
+                    </div>
+                </div>
+                <div class="perfume-info">
+                    <div class="marca">PACO RABANNE</div>
+                    <div class="nombre">INVICTUS</div>
+                    <div class="mililitros">100 ML</div>
+                    <div class="genero hombre">CABALLERO</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 2 -->
+            <div class="perfume-item">
+                <div class="perfume-imagen">
+                    <!-- Reemplazar con imagen real -->
+                    <div style="width: 60px; height: 120px; background: linear-gradient(to bottom, #8B4513, #A0522D); border-radius: 5px; position: relative;">
+                        <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 40px; height: 15px; background-color: #FFD700; border-radius: 3px;"></div>
+                    </div>
+                </div>
+                <div class="perfume-info">
+                    <div class="marca">PACO RABANNE</div>
+                    <div class="nombre">ONE MILLION PRIVÉ</div>
+                    <div class="mililitros">100 ML</div>
+                    <div class="genero hombre">CABALLERO</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 3 -->
+            <div class="perfume-item">
+                <div class="perfume-imagen">
+                    <!-- Reemplazar con imagen real -->
+                    <div style="width: 60px; height: 120px; background: linear-gradient(to bottom, #B8860B, #DAA520); border-radius: 5px; position: relative;">
+                        <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 35px; height: 20px; background-color: #000; border-radius: 3px;"></div>
+                    </div>
+                </div>
+                <div class="perfume-info">
+                    <div class="marca">PACO RABANNE</div>
+                    <div class="nombre">ONE MILLION</div>
+                    <div class="mililitros">100 ML</div>
+                    <div class="genero hombre">CABALLERO</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 4 -->
+            <div class="perfume-item">
+                <div class="perfume-imagen">
+                    <!-- Reemplazar con imagen real -->
+                    <div style="width: 60px; height: 120px; background: linear-gradient(to bottom, #FF69B4, #FF1493); border-radius: 5px; position: relative;">
+                        <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 30px; height: 25px; background-color: #fff; border-radius: 3px;"></div>
+                    </div>
+                </div>
+                <div class="perfume-info">
+                    <div class="marca">PACO RABANNE</div>
+                    <div class="nombre">PURE XS</div>
+                    <div class="mililitros">100 ML</div>
+                    <div class="genero mujer">DAMA</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 5 -->
+            <div class="perfume-item">
+                <div class="perfume-imagen">
+                    <!-- Reemplazar con imagen real -->
+                    <div style="width: 60px; height: 120px; background: linear-gradient(to bottom, #32CD32, #228B22); border-radius: 5px; position: relative;">
+                        <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 40px; height: 15px; background-color: #FFD700; border-radius: 3px;"></div>
+                    </div>
+                </div>
+                <div class="perfume-info">
+                    <div class="marca">PACO RABANNE</div>
+                    <div class="nombre">ONE MILLION LUCKY</div>
+                    <div class="mililitros">100 ML</div>
+                    <div class="genero hombre">CABALLERO</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 6 -->
+            <div class="perfume-item">
+                <div class="perfume-imagen">
+                    <!-- Reemplazar con imagen real -->
+                    <div style="width: 60px; height: 120px; background: linear-gradient(to bottom, #00008B, #0000CD); border-radius: 5px; position: relative;">
+                        <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 30px; height: 20px; background-color: #d4af37; border-radius: 3px;"></div>
+                    </div>
+                </div>
+                <div class="perfume-info">
+                    <div class="marca">PACO RABANNE</div>
+                    <div class="nombre">INVICTUS INTENSE</div>
+                    <div class="mililitros">100 ML</div>
+                    <div class="genero hombre">CABALLERO</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 7 -->
+            <div class="perfume-item">
+                <div class="perfume-imagen">
+                    <!-- Reemplazar con imagen real -->
+                    <div style="width: 60px; height: 120px; background: linear-gradient(to bottom, #000, #333); border-radius: 5px; position: relative;">
+                        <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 35px; height: 18px; background-color: #8B0000; border-radius: 3px;"></div>
+                    </div>
+                </div>
+                <div class="perfume-info">
+                    <div class="marca">PACO RABANNE</div>
+                    <div class="nombre">BLACK XS L'EXCÈS</div>
+                    <div class="mililitros">100 ML</div>
+                    <div class="genero hombre">CABALLERO</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 8 -->
+            <div class="perfume-item">
+                <div class="perfume-imagen">
+                    <!-- Reemplazar con imagen real -->
+                    <div style="width: 60px; height: 120px; background: linear-gradient(to bottom, #4B0082, #8A2BE2); border-radius: 5px; position: relative;">
+                        <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 35px; height: 18px; background-color: #FF69B4; border-radius: 3px;"></div>
+                    </div>
+                </div>
+                <div class="perfume-info">
+                    <div class="marca">PACO RABANNE</div>
+                    <div class="nombre">BLACK XS L'APHRODISIAQUE</div>
+                    <div class="mililitros">100 ML</div>
+                    <div class="genero mujer">DAMA</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 9 -->
+            <div class="perfume-item">
+                <div class="perfume-imagen">
+                    <!-- Reemplazar con imagen real -->
+                    <div style="width: 60px; height: 120px; background: linear-gradient(to bottom, #000, #222); border-radius: 5px; position: relative;">
+                        <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 40px; height: 15px; background-color: #C0C0C0; border-radius: 3px;"></div>
+                    </div>
+                </div>
+                <div class="perfume-info">
+                    <div class="marca">PACO RABANNE</div>
+                    <div class="nombre">BLACK XS</div>
+                    <div class="mililitros">100 ML</div>
+                    <div class="genero hombre">CABALLERO</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 10 - Ejemplo de otra marca -->
+            <div class="perfume-item">
+                <div class="perfume-imagen">
+                    <!-- Reemplazar con imagen real -->
+                    <div style="width: 60px; height: 120px; background: linear-gradient(to bottom, #1a1a2e, #16213e); border-radius: 5px; position: relative;">
+                        <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 25px; height: 25px; background-color: #fff; border-radius: 50%;"></div>
+                    </div>
+                </div>
+                <div class="perfume-info">
+                    <div class="marca">DIOR</div>
+                    <div class="nombre">SAUVAGE</div>
+                    <div class="mililitros">100 ML</div>
+                    <div class="genero hombre">CABALLERO</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 11 - Ejemplo de otra marca -->
+            <div class="perfume-item">
+                <div class="perfume-imagen">
+                    <!-- Reemplazar con imagen real -->
+                    <div style="width: 60px; height: 120px; background: linear-gradient(to bottom, #fff, #f5f5f5); border: 1px solid #ddd; border-radius: 5px; position: relative;">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; color: #000; font-weight: bold;">N°5</div>
+                    </div>
+                </div>
+                <div class="perfume-info">
+                    <div class="marca">CHANEL</div>
+                    <div class="nombre">N°5</div>
+                    <div class="mililitros">100 ML</div>
+                    <div class="genero mujer">DAMA</div>
+                </div>
+            </div>
+            
+            <!-- Perfume 12 - Ejemplo de otra marca -->
+            <div class="perfume-item">
+                <div class="perfume-imagen">
+                    <!-- Reemplazar con imagen real -->
+                    <div style="width: 60px; height: 120px; background: linear-gradient(to bottom, #003366, #0066cc); border-radius: 5px; position: relative;">
+                        <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 30px; height: 25px; background-color: #fff; border-radius: 3px;"></div>
+                    </div>
+                </div>
+                <div class="perfume-info">
+                    <div class="marca">YVES SAINT LAURENT</div>
+                    <div class="nombre">Y EAU DE PARFUM</div>
+                    <div class="mililitros">100 ML</div>
+                    <div class="genero hombre">CABALLERO</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Stélum | Catálogo exclusivo | Todos los derechos reservados © 2025</p>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
