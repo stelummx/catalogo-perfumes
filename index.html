@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Perfumes | Perfumes nuevos y testers 100% auténticos.</title>
+    <title>Catálogo de Perfumes | Los Más Vendidos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* ===== CATÁLOGO DE PERFUMES ===== */
+        /* ===== ESTILOS PARA CATÁLOGO DE PERFUMES ===== */
         @page {
             size: A4;
             margin: 0;
@@ -16,7 +16,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', 'Arial', sans-serif;
+            font-family: 'Figtree', 'Arial';
         }
 
         body {
@@ -36,12 +36,12 @@
             flex-direction: column;
         }
 
-        /* HEADER MEJORADO */
+        /* HEADER 2 */
         .header {
             text-align: center;
             margin-bottom: 25px;
             padding-bottom: 15px;
-            border-bottom: 3px solid #D4AF37;
+            border-bottom: 3px solid #2C3E50;
             background: linear-gradient(135deg, #2C3E50 0%, #1A1A1A 100%);
             padding: 20px;
             border-radius: 10px;
@@ -50,7 +50,7 @@
         }
 
         .header h1 {
-            font-family: 'Montserrat', 'Poppins', serif;
+            font-family: 'Avenir';
             font-size: 28px;
             color: #FFFFFF;
             margin-bottom: 8px;
@@ -60,12 +60,12 @@
 
         .header h2 {
             font-size: 16px;
-            color: #D4AF37;
+            color: #8C8C8C;
             font-weight: 500;
             letter-spacing: 0.5px;
         }
 
-        /* GRID DE PERFUMES MEJORADO */
+        /* GRID DE PERFUMES 2 */
         .perfumes-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -87,7 +87,6 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            cursor: pointer;
         }
 
         .perfume-item::before {
@@ -97,25 +96,25 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #D4AF37, #FFD700);
+            background: linear-gradient(90deg, #2C3E50, #508FCF);
         }
 
         .perfume-item:hover {
             transform: translateY(-8px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-            border-color: #D4AF37;
+            border-color: #2C3E50;
         }
 
-        /* BOTÓN VER MÁS (aparece en hover) */
-        .ver-mas-btn {
+        /* BOTÓN WHATSAPP HOVER */
+        .whatsapp-btn-hover {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) scale(0.9);
-            background: rgba(44, 62, 80, 0.95);
+            background: linear-gradient(135deg, #25D366, #128C7E);
             color: white;
             border: none;
-            padding: 12px 24px;
+            padding: 14px 28px;
             border-radius: 25px;
             font-weight: 600;
             font-size: 14px;
@@ -125,11 +124,20 @@
             z-index: 10;
             display: flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            text-decoration: none;
+            text-align: center;
+            white-space: nowrap;
         }
 
-        .perfume-item:hover .ver-mas-btn {
+        .whatsapp-btn-hover:hover {
+            background: linear-gradient(135deg, #1da851, #0e7c5a);
+            transform: translate(-50%, -50%) scale(1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .perfume-item:hover .whatsapp-btn-hover {
             opacity: 1;
             transform: translate(-50%, -50%) scale(1);
         }
@@ -137,7 +145,7 @@
         .perfume-imagen {
             width: 100%;
             height: 150px;
-            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            background: linear-gradient(180deg, #FDFDFD, #F2F2F2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -152,15 +160,15 @@
 
         .perfume-item:hover .perfume-imagen {
             background: linear-gradient(145deg, #ffffff, #f8f9fa);
-            border-color: #D4AF37;
+            border-color: #000;
             filter: brightness(0.9);
         }
 
         .perfume-imagen img {
-            max-width: 85%;
-            max-height: 85%;
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+            filter: drop-shadow(0px 0px 0px rgba(0,0,0,0.1));
             transition: all 0.3s ease;
         }
 
@@ -190,7 +198,7 @@
             transform: translateX(-50%);
             width: 25px;
             height: 15px;
-            background: #D4AF37;
+            background: #2C3E50;
             border-radius: 4px 4px 0 0;
         }
 
@@ -238,10 +246,10 @@
         }
 
         .nombre {
-            font-size: 12px;
-            color: #E74C3C;
+            font-size: 11px;
+            color: #758696;
             margin-bottom: 6px;
-            font-weight: 600;
+            font-weight: 400;
             min-height: 32px;
             display: flex;
             align-items: center;
@@ -251,7 +259,7 @@
 
         .mililitros {
             font-size: 11px;
-            color: #495057;
+            color: #758696;
             font-weight: bold;
             background: #f8f9fa;
             padding: 3px 8px;
@@ -267,13 +275,13 @@
             padding: 4px 12px;
             border-radius: 15px;
             margin-top: 5px;
-            font-weight: 600;
+            font-weight: 300;
             letter-spacing: 0.3px;
             text-transform: uppercase;
         }
 
         .hombre {
-            background: linear-gradient(135deg, #3498db, #2980b9);
+            background: linear-gradient(135deg, #42A1FF, #2980b9);
             color: white;
             box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
         }
@@ -290,159 +298,11 @@
             box-shadow: 0 2px 4px rgba(39, 174, 96, 0.3);
         }
 
-        /* MODAL ESTILOS */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 500px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            position: relative;
-            animation: slideUp 0.4s ease;
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 28px;
-            cursor: pointer;
-            color: #7f8c8d;
-            transition: color 0.3s;
-        }
-
-        .close-modal:hover {
-            color: #e74c3c;
-        }
-
-        .modal-header {
-            text-align: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #f1f1f1;
-        }
-
-        .modal-header h3 {
-            color: #2C3E50;
-            font-size: 24px;
-            margin-bottom: 8px;
-        }
-
-        .modal-body {
-            margin-bottom: 25px;
-        }
-
-        .perfume-details {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 25px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
-        }
-
-        .modal-image {
-            width: 100px;
-            height: 150px;
-            background: linear-gradient(145deg, #f1f1f1, #e1e1e1);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-info h4 {
-            color: #2C3E50;
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-
-        .modal-info .marca-modal {
-            color: #7f8c8d;
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        .modal-info .ml-modal {
-            background: #D4AF37;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 12px;
-            display: inline-block;
-        }
-
-        /* BOTÓN WHATSAPP */
-        .whatsapp-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color: white;
-            border: none;
-            padding: 16px 30px;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .whatsapp-btn:hover {
-            background: linear-gradient(135deg, #1da851, #0e7c5a);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-        }
-
-        .whatsapp-btn:active {
-            transform: translateY(-1px);
-        }
-
-        .whatsapp-icon {
-            font-size: 24px;
-        }
-
-        .whatsapp-text {
-            flex-grow: 1;
-        }
-
         /* FOOTER */
         .footer {
             text-align: center;
-            margin-top: 20px;
-            padding-top: 15px;
+            margin-top: 25px;
+            padding-top: 25px;
             border-top: 2px solid #f1f1f1;
             font-size: 11px;
             color: #6c757d;
@@ -471,17 +331,6 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-        }
-
-        .btn-imprimir {
-            background: linear-gradient(135deg, #2C3E50, #4A6572);
-            color: white;
-        }
-
-        .btn-imprimir:hover {
-            background: linear-gradient(135deg, #1A252F, #34495E);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(44, 62, 80, 0.2);
         }
 
         /* ===== RESPONSIVE DESIGN ===== */
@@ -521,20 +370,9 @@
                 padding: 12px;
             }
             
-            .ver-mas-btn {
-                padding: 10px 18px;
-                font-size: 12px;
-            }
-            
-            .modal-content {
-                width: 95%;
-                padding: 20px;
-            }
-            
-            .perfume-details {
-                flex-direction: column;
-                text-align: center;
-                gap: 15px;
+            .whatsapp-btn-hover {
+                padding: 12px 20px;
+                font-size: 13px;
             }
         }
 
@@ -551,9 +389,9 @@
                 font-size: 20px;
             }
             
-            .whatsapp-btn {
-                padding: 14px 20px;
-                font-size: 16px;
+            .whatsapp-btn-hover {
+                padding: 10px 16px;
+                font-size: 12px;
             }
         }
 
@@ -575,7 +413,7 @@
                 transform: none;
             }
             
-            .ver-mas-btn {
+            .whatsapp-btn-hover {
                 display: none !important;
             }
             
@@ -585,7 +423,7 @@
                 border-bottom: 2px solid black;
             }
             
-            .modal, .acciones, .footer {
+            .acciones, .footer {
                 display: none !important;
             }
         }
@@ -594,395 +432,279 @@
 <body>
     <div class="catalogo-container">
         <div class="header">
-            <h1>CATÁLOGO DE PERFUMES DE DISEÑADOR</h1>
-            <h2>LOS MÁS VENDIDOS - EDICIÓN EXCLUSIVA</h2>
+            <h1>PERFUMES DE DISEÑADOR</h1>
+            <h2>Perfumes y Testers 100% auténticos.</h2>
         </div>
         
         <div class="perfumes-grid">
             <!-- Perfume 1 -->
-            <div class="perfume-item" data-perfume="INVICTUS" data-marca="PACO RABANNE" data-ml="100" data-genero="hombre">
-                <div class="perfume-imagen">
-                    <div class="imagen-placeholder">
-                        <div class="botella-estilizada">
-                            <div class="tapón"></div>
-                            <div class="cuerpo"></div>
-                            <div class="base"></div>
-                        </div>
-                        <div class="texto-placeholder">Imagen del producto</div>
-                    </div>
-                </div>
-                <button class="ver-mas-btn">
-                    <i class="fas fa-info-circle"></i> Ver detalles
-                </button>
-                <div class="perfume-info">
-                    <div class="marca">PACO RABANNE</div>
-                    <div class="nombre">INVICTUS</div>
-                    <div class="mililitros">100 ML</div>
-                    <div class="genero hombre">CABALLERO</div>
-                </div>
-            </div>
+            <div class="perfume-item" data-perfume="The Most Wanted EDP intense" data-marca="AZZARO" data-ml="100" data-genero="hombre">
+    <div class="perfume-imagen">
+        <!-- IMAGEN -->
+        <img src="https://drive.google.com/thumbnail?id=1uOqVpjH16ZkeMVpLsi7VFxn5np3Lvkrs" alt="Azzaro The Most Wanted EDP intense 100ml" class="imagen-real">
+    </div>
+    <a class="whatsapp-btn-hover" id="whatsappBtn1" target="_blank">
+        <i class="fab fa-whatsapp"></i> Me interesa
+    </a>
+    <div class="perfume-info">
+        <div class="marca">AZZARO</div>
+        <div class="nombre">The Most Wanted - Eau de Parfum Intense</div>
+        <div class="mililitros">100 ML</div>
+        <div class="genero hombre">CABALLERO</div>
+    </div>
+</div>
             
             <!-- Perfume 2 -->
-            <div class="perfume-item" data-perfume="ONE MILLION PRIVÉ" data-marca="PACO RABANNE" data-ml="100" data-genero="hombre">
-                <div class="perfume-imagen">
-                    <div class="imagen-placeholder">
-                        <div class="botella-estilizada">
-                            <div class="tapón"></div>
-                            <div class="cuerpo"></div>
-                            <div class="base"></div>
-                        </div>
-                        <div class="texto-placeholder">Imagen del producto</div>
-                    </div>
-                </div>
-                <button class="ver-mas-btn">
-                    <i class="fas fa-info-circle"></i> Ver detalles
-                </button>
-                <div class="perfume-info">
-                    <div class="marca">PACO RABANNE</div>
-                    <div class="nombre">ONE MILLION PRIVÉ</div>
-                    <div class="mililitros">100 ML</div>
-                    <div class="genero hombre">CABALLERO</div>
-                </div>
+            <div class="perfume-item" data-perfume="BAD BOY" data-marca="Caronlina Herrera" data-ml="100" data-genero="hombre">
+    <div class="perfume-imagen">
+        <!-- IMAGEN -->
+        <img src="https://drive.google.com/thumbnail?id=1Fu7gPkC9M1UUgAMVqgks8wkl-ft_ABPe" alt="Carolina Herrera Cobalt EDP Elixir 100ml" class="imagen-real">
+    </div>
+    <a class="whatsapp-btn-hover" id="whatsappBtn1" target="_blank">
+        <i class="fab fa-whatsapp"></i> Me interesa
+    </a>
+    <div class="perfume-info">
+        <div class="marca">Carolina Herrera</div>
+        <div class="nombre">BadBoy COBALT - Eau de Parfum Elixir</div>
+        <div class="mililitros">100 ML</div>
+        <div class="genero hombre">CABALLERO</div>
+    </div>
             </div>
             
             <!-- Perfume 3 -->
-            <div class="perfume-item" data-perfume="ONE MILLION" data-marca="PACO RABANNE" data-ml="100" data-genero="hombre">
-                <div class="perfume-imagen">
-                    <div class="imagen-placeholder">
-                        <div class="botella-estilizada">
-                            <div class="tapón"></div>
-                            <div class="cuerpo"></div>
-                            <div class="base"></div>
-                        </div>
-                        <div class="texto-placeholder">Imagen del producto</div>
-                    </div>
-                </div>
-                <button class="ver-mas-btn">
-                    <i class="fas fa-info-circle"></i> Ver detalles
-                </button>
-                <div class="perfume-info">
-                    <div class="marca">PACO RABANNE</div>
-                    <div class="nombre">ONE MILLION</div>
-                    <div class="mililitros">100 ML</div>
-                    <div class="genero hombre">CABALLERO</div>
-                </div>
+           <div class="perfume-item" data-perfume="Jean Paul Gaultier Le Male Le Parfum Intense" data-marca="Jean Paul Gaultier" data-ml="75" data-genero="hombre">
+    <div class="perfume-imagen">
+        <!-- IMAGEN -->
+        <img src="https://drive.google.com/thumbnail?id=16Oee1z193JOYrGspKZCBTVHncL-nWY_R" alt="Jean Paul Gaultier Le Male Le Parfum Intense 75ml" class="imagen-real">
+    </div>
+    <a class="whatsapp-btn-hover" id="whatsappBtn1" target="_blank">
+        <i class="fab fa-whatsapp"></i> Me interesa
+    </a>
+    <div class="perfume-info">
+        <div class="marca">Jean Paul Gaultier</div>
+        <div class="nombre">Le Male Le Parfum Intense</div>
+        <div class="mililitros">75 ML</div>
+        <div class="genero hombre">CABALLERO</div>
+    </div>
             </div>
             
             <!-- Perfume 4 -->
-            <div class="perfume-item" data-perfume="PURE XS" data-marca="PACO RABANNE" data-ml="100" data-genero="mujer">
-                <div class="perfume-imagen">
-                    <div class="imagen-placeholder">
-                        <div class="botella-estilizada">
-                            <div class="tapón"></div>
-                            <div class="cuerpo"></div>
-                            <div class="base"></div>
-                        </div>
-                        <div class="texto-placeholder">Imagen del producto</div>
-                    </div>
-                </div>
-                <button class="ver-mas-btn">
-                    <i class="fas fa-info-circle"></i> Ver detalles
-                </button>
-                <div class="perfume-info">
-                    <div class="marca">PACO RABANNE</div>
-                    <div class="nombre">PURE XS</div>
-                    <div class="mililitros">100 ML</div>
-                    <div class="genero mujer">DAMA</div>
-                </div>
+           <div class="perfume-item" data-perfume="Acqua di Gio Profondo Parfum" data-marca="Giorgio Armani" data-ml="100" data-genero="hombre">
+    <div class="perfume-imagen">
+        <!-- IMAGEN -->
+        <img src="https://drive.google.com/thumbnail?id=16ZUR4Wvsg-UE_XRK6VqIGHs8xZnEREOf" alt="Giorgio Armani Acqua di Gio Profondo Parfum 100ml" class="imagen-real">
+    </div>
+    <a class="whatsapp-btn-hover" id="whatsappBtn1" target="_blank">
+        <i class="fab fa-whatsapp"></i> Me interesa
+    </a>
+    <div class="perfume-info">
+        <div class="marca">Giorgio Armani</div>
+        <div class="nombre">Acqua di Gio Profondo Parfum</div>
+        <div class="mililitros">100 ML</div>
+        <div class="genero hombre">CABALLERO</div>
+    </div>
             </div>
             
             <!-- Perfume 5 -->
-            <div class="perfume-item" data-perfume="ONE MILLION LUCKY" data-marca="PACO RABANNE" data-ml="100" data-genero="hombre">
-                <div class="perfume-imagen">
-                    <div class="imagen-placeholder">
-                        <div class="botella-estilizada">
-                            <div class="tapón"></div>
-                            <div class="cuerpo"></div>
-                            <div class="base"></div>
-                        </div>
-                        <div class="texto-placeholder">Imagen del producto</div>
-                    </div>
-                </div>
-                <button class="ver-mas-btn">
-                    <i class="fas fa-info-circle"></i> Ver detalles
-                </button>
-                <div class="perfume-info">
-                    <div class="marca">PACO RABANNE</div>
-                    <div class="nombre">ONE MILLION LUCKY</div>
-                    <div class="mililitros">100 ML</div>
-                    <div class="genero hombre">CABALLERO</div>
-                </div>
+           <div class="perfume-item" data-perfume="Acqua di Gio Profondo Parfum" data-marca="Giorgio Armani" data-ml="100" data-genero="mujer">
+    <div class="perfume-imagen">
+        <!-- IMAGEN -->
+        <img src="https://drive.google.com/thumbnail?id=1Phb7yd6zNCOa1HVZS12orN6rqc3byOOG" alt="Lancôme La vie est bell Vanille Nude Eau de Parfum 100ml" class="imagen-real">
+    </div>
+    <a class="whatsapp-btn-hover" id="whatsappBtn1" target="_blank">
+        <i class="fab fa-whatsapp"></i> Me interesa
+    </a>
+    <div class="perfume-info">
+        <div class="marca">Lancôme</div>
+        <div class="nombre">La vie est bell Vanille Nude Eau de Parfum</div>
+        <div class="mililitros">100 ML</div>
+        <div class="genero mujer">DAMA</div>
+    </div>
             </div>
             
             <!-- Perfume 6 -->
-            <div class="perfume-item" data-perfume="INVICTUS INTENSE" data-marca="PACO RABANNE" data-ml="100" data-genero="hombre">
-                <div class="perfume-imagen">
-                    <div class="imagen-placeholder">
-                        <div class="botella-estilizada">
-                            <div class="tapón"></div>
-                            <div class="cuerpo"></div>
-                            <div class="base"></div>
-                        </div>
-                        <div class="texto-placeholder">Imagen del producto</div>
-                    </div>
-                </div>
-                <button class="ver-mas-btn">
-                    <i class="fas fa-info-circle"></i> Ver detalles
-                </button>
-                <div class="perfume-info">
-                    <div class="marca">PACO RABANNE</div>
-                    <div class="nombre">INVICTUS INTENSE</div>
-                    <div class="mililitros">100 ML</div>
-                    <div class="genero hombre">CABALLERO</div>
-                </div>
+            <div class="perfume-item" data-perfume="Versace EROS energy pour homme EDP" data-marca="VERSACE" data-ml="100" data-genero="hombre">
+    <div class="perfume-imagen">
+        <!-- IMAGEN -->
+        <img src="https://drive.google.com/thumbnail?id=1G6ZgBKXHUsME65dr-bAAXXHzVBHzIvKX" alt="Versace EROS energy pour homme EDP 100ml" class="imagen-real">
+    </div>
+    <a class="whatsapp-btn-hover" id="whatsappBtn1" target="_blank">
+        <i class="fab fa-whatsapp"></i> Me interesa
+    </a>
+    <div class="perfume-info">
+        <div class="marca">VERSACE</div>
+        <div class="nombre">Eros Energy Pour Homme Eau de Parfum</div>
+        <div class="mililitros">100 ML</div>
+        <div class="genero hombre">CABALLERO</div>
+    </div>
             </div>
             
             <!-- Perfume 7 -->
-            <div class="perfume-item" data-perfume="BLACK XS L'EXCÈS" data-marca="PACO RABANNE" data-ml="100" data-genero="hombre">
-                <div class="perfume-imagen">
-                    <div class="imagen-placeholder">
-                        <div class="botella-estilizada">
-                            <div class="tapón"></div>
-                            <div class="cuerpo"></div>
-                            <div class="base"></div>
-                        </div>
-                        <div class="texto-placeholder">Imagen del producto</div>
-                    </div>
-                </div>
-                <button class="ver-mas-btn">
-                    <i class="fas fa-info-circle"></i> Ver detalles
-                </button>
-                <div class="perfume-info">
-                    <div class="marca">PACO RABANNE</div>
-                    <div class="nombre">BLACK XS L'EXCÈS</div>
-                    <div class="mililitros">100 ML</div>
-                    <div class="genero hombre">CABALLERO</div>
-                </div>
+            <div class="perfume-item" data-perfume="Valentino Born in Roma Intense Eau de Parfum" data-marca="Valentino" data-ml="100" data-genero="hombre">
+    <div class="perfume-imagen">
+        <!-- IMAGEN -->
+        <img src="https://drive.google.com/thumbnail?id=10hiIaJ58fjVIrffHDHGMJAWkOdVleOU9" alt="Valentino Born in Roma Intense Eau de Parfum 100ml" class="imagen-real">
+    </div>
+    <a class="whatsapp-btn-hover" id="whatsappBtn1" target="_blank">
+        <i class="fab fa-whatsapp"></i> Me interesa
+    </a>
+    <div class="perfume-info">
+        <div class="marca">Valentino</div>
+        <div class="nombre">Born in Roma Intense Eau de Parfum</div>
+        <div class="mililitros">100 ML</div>
+        <div class="genero hombre">CABALLERO</div>
+    </div>
             </div>
             
             <!-- Perfume 8 -->
-            <div class="perfume-item" data-perfume="BLACK XS L'APHRODISIAQUE" data-marca="PACO RABANNE" data-ml="100" data-genero="mujer">
-                <div class="perfume-imagen">
-                    <div class="imagen-placeholder">
-                        <div class="botella-estilizada">
-                            <div class="tapón"></div>
-                            <div class="cuerpo"></div>
-                            <div class="base"></div>
-                        </div>
-                        <div class="texto-placeholder">Imagen del producto</div>
-                    </div>
-                </div>
-                <button class="ver-mas-btn">
-                    <i class="fas fa-info-circle"></i> Ver detalles
-                </button>
-                <div class="perfume-info">
-                    <div class="marca">PACO RABANNE</div>
-                    <div class="nombre">BLACK XS L'APHRODISIAQUE</div>
-                    <div class="mililitros">100 ML</div>
-                    <div class="genero mujer">DAMA</div>
-                </div>
+            <div class="perfume-item" data-perfume="Versace Eros Eau de Parfum" data-marca="Versace" data-ml="100" data-genero="hombre">
+    <div class="perfume-imagen">
+        <!-- IMAGEN -->
+        <img src="https://drive.google.com/thumbnail?id=1GEFKFSp86l6R1WmoEjzRlfQzIgP7UQub" alt="Versace Eros Eau de Parfum 100ml" class="imagen-real">
+    </div>
+    <a class="whatsapp-btn-hover" id="whatsappBtn1" target="_blank">
+        <i class="fab fa-whatsapp"></i> Me interesa
+    </a>
+    <div class="perfume-info">
+        <div class="marca">Versace</div>
+        <div class="nombre">Eros Eau de Parfum</div>
+        <div class="mililitros">100 ML</div>
+        <div class="genero hombre">CABALLERO</div>
+    </div>
             </div>
             
             <!-- Perfume 9 -->
-            <div class="perfume-item" data-perfume="BLACK XS" data-marca="PACO RABANNE" data-ml="100" data-genero="hombre">
-                <div class="perfume-imagen">
-                    <div class="imagen-placeholder">
-                        <div class="botella-estilizada">
-                            <div class="tapón"></div>
-                            <div class="cuerpo"></div>
-                            <div class="base"></div>
-                        </div>
-                        <div class="texto-placeholder">Imagen del producto</div>
-                    </div>
-                </div>
-                <button class="ver-mas-btn">
-                    <i class="fas fa-info-circle"></i> Ver detalles
-                </button>
-                <div class="perfume-info">
-                    <div class="marca">PACO RABANNE</div>
-                    <div class="nombre">BLACK XS</div>
-                    <div class="mililitros">100 ML</div>
-                    <div class="genero hombre">CABALLERO</div>
-                </div>
+            <div class="perfume-item" data-perfume="Carolina Herrera Set Very Good Girl Eau de Parfum" data-marca="Carolina Herrera" data-ml="100" data-genero="mujer">
+    <div class="perfume-imagen">
+        <!-- IMAGEN -->
+        <img src="https://drive.google.com/thumbnail?id=18Pj2LeFxPBnFSSbiBZ0byZKV-HBmL9Hx" alt="Carolina Herrera Set Very Good Girl Eau de Parfum" class="imagen-real">
+    </div>
+    <a class="whatsapp-btn-hover" id="whatsappBtn1" target="_blank">
+        <i class="fab fa-whatsapp"></i> Me interesa
+    </a>
+    <div class="perfume-info">
+        <div class="marca">Carolina Herrera</div>
+        <div class="nombre">Set Very Good Girl Eau de Parfum</div>
+        <div class="mililitros">100 ML</div>
+        <div class="genero mujer">DAMA</div>
+    </div>
             </div>
             
             <!-- Perfume 10 -->
-            <div class="perfume-item" data-perfume="SAUVAGE" data-marca="DIOR" data-ml="100" data-genero="hombre">
-                <div class="perfume-imagen">
-                    <div class="imagen-placeholder">
-                        <div class="botella-estilizada">
-                            <div class="tapón"></div>
-                            <div class="cuerpo"></div>
-                            <div class="base"></div>
-                        </div>
-                        <div class="texto-placeholder">Imagen del producto</div>
-                    </div>
-                </div>
-                <button class="ver-mas-btn">
-                    <i class="fas fa-info-circle"></i> Ver detalles
-                </button>
-                <div class="perfume-info">
-                    <div class="marca">DIOR</div>
-                    <div class="nombre">SAUVAGE</div>
-                    <div class="mililitros">100 ML</div>
-                    <div class="genero hombre">CABALLERO</div>
-                </div>
+            <div class="perfume-item" data-perfume="Burberry Her Eau de Parfum" data-marca="Burberry" data-ml="100" data-genero="mujer">
+    <div class="perfume-imagen">
+        <!-- IMAGEN -->
+        <img src="https://drive.google.com/thumbnail?id=1by2PtoddHROl_xZcaJISK5KqyaYC4w2u" alt="Burberry Her Eau de Parfum 100ml" class="imagen-real">
+    </div>
+    <a class="whatsapp-btn-hover" id="whatsappBtn1" target="_blank">
+        <i class="fab fa-whatsapp"></i> Me interesa
+    </a>
+    <div class="perfume-info">
+        <div class="marca">Burberry</div>
+        <div class="nombre">Her Eau de Parfum</div>
+        <div class="mililitros">100 ML</div>
+        <div class="genero mujer">DAMA</div>
+    </div>
             </div>
             
             <!-- Perfume 11 -->
-            <div class="perfume-item" data-perfume="N°5" data-marca="CHANEL" data-ml="100" data-genero="mujer">
-                <div class="perfume-imagen">
-                    <div class="imagen-placeholder">
-                        <div class="botella-estilizada">
-                            <div class="tapón"></div>
-                            <div class="cuerpo"></div>
-                            <div class="base"></div>
-                        </div>
-                        <div class="texto-placeholder">Imagen del producto</div>
-                    </div>
-                </div>
-                <button class="ver-mas-btn">
-                    <i class="fas fa-info-circle"></i> Ver detalles
-                </button>
-                <div class="perfume-info">
-                    <div class="marca">CHANEL</div>
-                    <div class="nombre">N°5</div>
-                    <div class="mililitros">100 ML</div>
-                    <div class="genero mujer">DAMA</div>
-                </div>
+            <div class="perfume-item" data-perfume="Rasasi Hawas Ice Eau de Parfum 100ml" data-marca="Rasasi" data-ml="100" data-genero="hombre">
+    <div class="perfume-imagen">
+        <!-- IMAGEN -->
+        <img src="https://drive.google.com/thumbnail?id=1Wwyf5ZfbKxtPMZogTmHyhhI31Htk3WzH" alt="Rasasi Hawas Ice Eau de Parfum 100ml" class="imagen-real">
+    </div>
+    <a class="whatsapp-btn-hover" id="whatsappBtn1" target="_blank">
+        <i class="fab fa-whatsapp"></i> Me interesa
+    </a>
+    <div class="perfume-info">
+        <div class="marca">Rasasi</div>
+        <div class="nombre">Hawas Ice Eau de Parfum</div>
+        <div class="mililitros">100 ML</div>
+        <div class="genero hombre">CABALLERO</div>
+    </div>
             </div>
             
             <!-- Perfume 12 -->
-            <div class="perfume-item" data-perfume="Y EAU DE PARFUM" data-marca="YVES SAINT LAURENT" data-ml="100" data-genero="hombre">
-                <div class="perfume-imagen">
-                    <div class="imagen-placeholder">
-                        <div class="botella-estilizada">
-                            <div class="tapón"></div>
-                            <div class="cuerpo"></div>
-                            <div class="base"></div>
-                        </div>
-                        <div class="texto-placeholder">Imagen del producto</div>
-                    </div>
-                </div>
-                <button class="ver-mas-btn">
-                    <i class="fas fa-info-circle"></i> Ver detalles
-                </button>
-                <div class="perfume-info">
-                    <div class="marca">YVES SAINT LAURENT</div>
-                    <div class="nombre">Y EAU DE PARFUM</div>
-                    <div class="mililitros">100 ML</div>
-                    <div class="genero hombre">CABALLERO</div>
-                </div>
+            <div class="perfume-item" data-perfume="Marc Jacobs Perfect Eau de Parfum" data-marca="Marc Jacobs" data-ml="100" data-genero="mujer">
+    <div class="perfume-imagen">
+        <!-- IMAGEN -->
+        <img src="https://drive.google.com/thumbnail?id=1zNE_Xv7JgB0Jh7KiO2WBmajZta9C2GmI" alt="Marc Jacobs Perfect Eau de Parfum 100ml" class="imagen-real">
+    </div>
+    <a class="whatsapp-btn-hover" id="whatsappBtn1" target="_blank">
+        <i class="fab fa-whatsapp"></i> Me interesa
+    </a>
+    <div class="perfume-info">
+        <div class="marca">Marc Jacobs</div>
+        <div class="nombre">Perfect Eau de Parfum</div>
+        <div class="mililitros">100 ML</div>
+        <div class="genero mujer">DAMA</div>
+    </div>
             </div>
-        </div>
-        
-        <!-- MODAL -->
-        <div class="modal" id="perfumeModal">
-            <div class="modal-content">
-                <span class="close-modal" id="closeModal">&times;</span>
-                
-                <div class="modal-header">
-                    <h3>Me interesa este perfume</h3>
-                    <p>Te contactaremos por WhatsApp para más detalles</p>
-                </div>
-                
-                <div class="modal-body">
-                    <div class="perfume-details">
-                        <div class="modal-image" id="modalImage">
-                            <!-- Imagen se generará dinámicamente -->
-                            <div class="botella-estilizada">
-                                <div class="tapón"></div>
-                                <div class="cuerpo"></div>
-                                <div class="base"></div>
-                            </div>
-                        </div>
-                        <div class="modal-info">
-                            <h4 id="modalPerfumeNombre">Nombre del perfume</h4>
-                            <div class="marca-modal" id="modalMarca">Marca</div>
-                            <div class="ml-modal" id="modalMl">100 ML</div>
-                        </div>
-                    </div>
-                    
-                    <a class="whatsapp-btn" id="whatsappLink" target="_blank">
-                        <i class="fab fa-whatsapp whatsapp-icon"></i>
-                        <span class="whatsapp-text">Contactar por WhatsApp</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="acciones">
-            <button class="btn btn-imprimir" onclick="window.print()">
-                <i class="fas fa-print"></i> Imprimir Catálogo
-            </button>
-        </div>
-        
+          </br></br>
+                <!-- Footer -->
         <div class="footer">
-            <p>STÉLUM | Catálogo exclusivo | Todos los derechos reservados © 2025</p>
+            <p>STÉLUM | Todos los derechos reservados © 2025</p>
         </div>
     </div>
 
     <script>
-        // DATOS DE CONFIGURACIÓN
+        // CONFIGURACIÓN
         const WHATSAPP_NUMBER = "+525519187450"; // Tu número de WhatsApp
         
-        // Variables globales
-        let currentPerfume = null;
+        // Función para generar enlace de WhatsApp
+        function generarEnlaceWhatsApp(nombrePerfume) {
+            // Codificar el mensaje para URL
+            const mensaje = `Hola, me interesa el perfume "${nombrePerfume}".`;
+            const mensajeCodificado = encodeURIComponent(mensaje);
+            
+            // Crear enlace de WhatsApp
+            return `https://wa.me/${WHATSAPP_NUMBER}?text=${mensajeCodificado}`;
+        }
         
-        // Inicializar eventos
+        // Configurar todos los botones de WhatsApp
         document.addEventListener('DOMContentLoaded', function() {
-            // Configurar eventos para cada perfume
+            // Obtener todos los items de perfume
             const perfumeItems = document.querySelectorAll('.perfume-item');
             
-            perfumeItems.forEach(item => {
-                // Click en el botón "Ver detalles"
-                const btn = item.querySelector('.ver-mas-btn');
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    openModal(item);
-                });
+            // Configurar cada botón
+            perfumeItems.forEach((item, index) => {
+                const nombrePerfume = item.getAttribute('data-perfume');
+                const botonWhatsApp = document.getElementById(`whatsappBtn${index + 1}`);
                 
-                // Click en todo el item (para UX mejorada)
+                if (botonWhatsApp && nombrePerfume) {
+                    // Generar y asignar el enlace
+                    const enlaceWhatsApp = generarEnlaceWhatsApp(nombrePerfume);
+                    botonWhatsApp.href = enlaceWhatsApp;
+                    
+                    // Agregar evento para tracking (opcional)
+                    botonWhatsApp.addEventListener('click', function() {
+                        console.log(`Click en WhatsApp para: ${nombrePerfume}`);
+                        // Aquí puedes agregar Google Analytics o tracking
+                    });
+                }
+            });
+            
+            // También hacer clic en todo el item (opcional)
+            perfumeItems.forEach(item => {
                 item.addEventListener('click', function(e) {
-                    if (!e.target.closest('.ver-mas-btn')) {
-                        openModal(item);
+                    // Si no se hizo clic en el botón de WhatsApp
+                    if (!e.target.closest('.whatsapp-btn-hover')) {
+                        const nombrePerfume = this.getAttribute('data-perfume');
+                        const enlaceWhatsApp = generarEnlaceWhatsApp(nombrePerfume);
+                        window.open(enlaceWhatsApp, '_blank');
                     }
                 });
             });
             
-            // Cerrar modal con el botón X
-            document.getElementById('closeModal').addEventListener('click', closeModal);
-            
-            // Cerrar modal al hacer clic fuera
-            document.getElementById('perfumeModal').addEventListener('click', function(e) {
-                if (e.target === this) {
-                    closeModal();
-                }
-            });
-            
-            // Cerrar modal con tecla ESC
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    closeModal();
-                }
-            });
-            
-            console.log('✅ Catálogo con WhatsApp integrado cargado correctamente');
+            console.log('✅ Catálogo con WhatsApp directo configurado');
+            console.log(`📱 Número configurado: ${WHATSAPP_NUMBER}`);
         });
         
-        // Función para abrir el modal
-        function openModal(perfumeElement) {
-            currentPerfume = {
-                nombre: perfumeElement.getAttribute('data-perfume'),
-                marca: perfumeElement.getAttribute('data-marca'),
-                ml: perfumeElement.getAttribute('data-ml'),
-                genero: perfumeElement.getAttribute('data-genero')
-            };
-            
-            // Actualizar contenido del modal
-            document.getElementById('modalPerfumeNombre').textContent = currentPerfume.nombre;
-            document.getElementById('modalMarca').textContent = currentPerfume.marca;
-            document.getElementById('modalMl').textContent = currentPerfume.ml + ' ML';
-            
-            // Generar enlace de WhatsApp
-            const mensaje = `Hola, me interesa el perfume "${currentPerfume.nombre}" de ${currentPerfume
+        // Función para abrir WhatsApp (se puede llamar desde otros lugares)
+        function contactarWhatsApp(nombrePerfume) {
+            const enlace = generarEnlaceWhatsApp(nombrePerfume);
+            window.open(enlace, '_blank');
+        }
+    </script>
+</body>
+</html>
