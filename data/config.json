@@ -1,0 +1,17 @@
+{
+  "tienda": "STÉLUM",
+  "titulo": "Perfumes de diseñador",
+  "subtitulo": "Perfumes nuevos y testers 100% auténticos. Pide el tuyo por WhatsApp.",
+  "whatsapp": "525519187450",
+  "url_base": "https://stelummx.github.io/catalogo-perfumes/",
+  "moneda": "MXN",
+  "confianza": [
+    "100% originales",
+    "Atención personal por WhatsApp",
+    "Pedidos sobre catálogo o a solicitud"
+  ],
+  "envios": "",
+  "pagos": "",
+  "instagram": "",
+  "sheet_csv_url": ""
+}
